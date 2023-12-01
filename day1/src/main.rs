@@ -1,8 +1,7 @@
 fn main() {
     println!(
         "{}",
-        String::from_utf8_lossy(&std::fs::read("input").unwrap())
-            .parse::<String>()
+        String::from_utf8(std::fs::read("input").unwrap())
             .unwrap()
             .split("\n")
             .map(|l| l.trim())
